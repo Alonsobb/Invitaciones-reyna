@@ -1,13 +1,10 @@
 #!/bin/bash
-# Script para actualizar la invitacion desde GitHub y redeployar
+# Script para actualizar la invitacion desde GitHub
+# Ejecutar en el servidor donde corre Dockge
+
+REPO_PATH="/mnt/Respaldos/data/respaldos/invitacion-reyna"
 
 echo "==> Descargando cambios de GitHub..."
-git pull origin main
+cd "$REPO_PATH" && git pull origin main
 
-echo "==> Reconstruyendo imagen Docker..."
-docker compose build --no-cache
-
-echo "==> Reiniciando contenedor..."
-docker compose up -d
-
-echo "✓ Actualización completada. Sitio disponible en http://localhost:8080"
+echo "✓ Actualización completada. Los cambios ya están activos en el sitio."
