@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  invitacion-reyna:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: invitacion-reyna:latest
+    container_name: invitacion-reyna
+    ports:
+      - "8080:80"   # Cambia 8080 por el puerto que quieras usar
+    restart: unless-stopped
