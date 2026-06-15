@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mis XV Años - Reyna Elizabet</title>
+  <meta name="description" content="Invitación a los XV años de Reyna Elizabet Muñoz García - 11 de julio 2026" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Cormorant+Garamond:wght@400;500;600&family=Sacramento&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f3ece0;
+      --bg-card: #fbf7ef;
+      --brown-dark: #4a3424;
+      --brown: #6b4a31;
+      --tan: #b08856;
+      --gold: #c19a4b;
+      --green: #5c6b48;
+      --cream: #efe5d3;
+      --text: #3a2c1e;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; background: var(--bg); }
+
+    body {
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--text);
+      background-color: var(--bg);
+      background-image:
+        radial-gradient(circle at 10% 10%, rgba(193,154,75,0.06) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(92,107,72,0.06) 0%, transparent 40%);
+      font-size: 18px;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 600; line-height: 1.2; }
+
+    .script { font-family: 'Sacramento', cursive; font-weight: 400; }
+
+    .container { width: 100%; max-width: 760px; margin: 0 auto; padding: 0 1.25rem; }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      position: relative;
+      min-height: 100svh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url('images/imagen1.jpeg') center/cover no-repeat;
+      transform: scale(1.05);
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(40,28,18,0.45) 0%, rgba(40,28,18,0.25) 40%, rgba(40,28,18,0.7) 100%);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      color: #fbf7ef;
+      padding: 2rem 1.25rem;
+    }
+    .hero-content .pretitle {
+      font-size: 1.3rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+      color: var(--cream);
+    }
+    .hero-content .name {
+      font-family: 'Sacramento', cursive;
+      font-size: clamp(3.5rem, 14vw, 6.5rem);
+      line-height: 1;
+      margin: 0.5rem 0;
+      text-shadow: 0 4px 20px rgba(0,0,0,0.4);
+      color: #fff;
+    }
+    .hero-content .subtitle {
+      font-size: 1.4rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--cream);
+    }
+    .hero-date {
+      margin-top: 1.5rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      letter-spacing: 0.15em;
+      border-top: 1px solid rgba(251,247,239,0.5);
+      border-bottom: 1px solid rgba(251,247,239,0.5);
+      padding: 0.6rem 1rem;
+    }
+    .scroll-cue {
+      position: absolute;
+      bottom: 1.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      color: var(--cream);
+      font-size: 0.9rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      animation: bob 2s ease-in-out infinite;
+    }
+    @keyframes bob { 0%,100%{transform:translateX(-50%) translateY(0);} 50%{transform:translateX(-50%) translateY(8px);} }
+
+    /* ---------- SECTIONS ---------- */
+    section { padding: 3.5rem 0; }
+    .section-icon {
+      display: block;
+      margin: 0 auto 1rem;
+      width: 44px;
+      height: 44px;
+      color: var(--tan);
+    }
+    .section-title {
+      text-align: center;
+      font-size: clamp(1.8rem, 6vw, 2.6rem);
+      color: var(--brown-dark);
+      margin-bottom: 0.4rem;
+    }
+    .section-sub {
+      text-align: center;
+      font-family: 'Sacramento', cursive;
+      font-size: 2rem;
+      color: var(--tan);
+      margin-bottom: 2rem;
+    }
+    .divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin: 0 auto 2.5rem;
+      max-width: 320px;
+      color: var(--tan);
+    }
+    .divider::before, .divider::after {
+      content: "";
+      height: 1px;
+      flex: 1;
+      background: linear-gradient(to right, transparent, var(--tan), transparent);
+    }
+
+    .intro-text {
+      text-align: center;
+      font-size: 1.3rem;
+      max-width: 600px;
+      margin: 0 auto;
+      color: var(--brown);
+    }
+
+    /* ---------- PARENTS / PADRINOS ---------- */
+    .people-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+    @media (min-width: 600px) { .people-grid { grid-template-columns: 1fr 1fr; } }
+    .person-card {
+      background: var(--bg-card);
+      border: 1px solid rgba(176,136,86,0.3);
+      border-radius: 10px;
+      padding: 1.8rem 1.5rem;
+      text-align: center;
+      box-shadow: 0 6px 20px rgba(74,52,36,0.08);
+    }
+    .person-card .label {
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-size: 0.95rem;
+      color: var(--tan);
+      margin-bottom: 0.8rem;
+    }
+    .person-card .pname {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      color: var(--brown-dark);
+      margin: 0.3rem 0;
+    }
+
+    /* ---------- CAROUSEL ---------- */
+    .carousel-section { background: var(--cream); }
+    .carousel {
+      position: relative;
+      max-width: 760px;
+      margin: 0 auto;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 12px 30px rgba(74,52,36,0.18);
+    }
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+    .carousel-slide {
+      min-width: 100%;
+      aspect-ratio: 4 / 3;
+      position: relative;
+    }
+    .carousel-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(251,247,239,0.85);
+      color: var(--brown-dark);
+      border: none;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      font-size: 1.4rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      transition: background 0.2s;
+      z-index: 3;
+    }
+    .carousel-btn:hover { background: #fff; }
+    .carousel-btn.prev { left: 12px; }
+    .carousel-btn.next { right: 12px; }
+    .carousel-dots {
+      display: flex;
+      justify-content: center;
+      gap: 0.6rem;
+      margin-top: 1.2rem;
+    }
+    .dot {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: rgba(176,136,86,0.4);
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .dot.active { background: var(--tan); transform: scale(1.2); }
+
+    /* ---------- TIMELINE / EVENTOS ---------- */
+    .timeline {
+      position: relative;
+      max-width: 560px;
+      margin: 0 auto;
+      padding-left: 0;
+    }
+    .event-card {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      background: var(--bg-card);
+      border: 1px solid rgba(176,136,86,0.3);
+      border-radius: 10px;
+      padding: 1.3rem 1.4rem;
+      margin-bottom: 1.2rem;
+      box-shadow: 0 5px 16px rgba(74,52,36,0.07);
+    }
+    .event-icon {
+      flex-shrink: 0;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--cream);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--brown);
+    }
+    .event-icon svg { width: 28px; height: 28px; }
+    .event-info .etime {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      color: var(--gold);
+      font-weight: 700;
+    }
+    .event-info .etitle {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      color: var(--brown-dark);
+    }
+    .event-info .eplace { color: var(--brown); font-size: 1.05rem; }
+
+    /* ---------- COUNTDOWN ---------- */
+    .countdown-section {
+      background:
+        linear-gradient(rgba(40,28,18,0.78), rgba(40,28,18,0.78)),
+        url('images/rancho.png') center/cover fixed no-repeat;
+      color: var(--cream);
+      text-align: center;
+    }
+    .countdown-section .section-title { color: #fff; }
+    .countdown {
+      display: flex;
+      justify-content: center;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+    }
+    .cd-box {
+      background: rgba(251,247,239,0.12);
+      border: 1px solid rgba(251,247,239,0.3);
+      border-radius: 10px;
+      padding: 1rem 0.8rem;
+      min-width: 78px;
+    }
+    .cd-num { font-family: 'Playfair Display', serif; font-size: 2.2rem; color: #fff; line-height: 1; }
+    .cd-label { font-size: 0.85rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--cream); margin-top: 0.4rem; }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      text-align: center;
+      padding: 3rem 1.25rem 3.5rem;
+      background: var(--brown-dark);
+      color: var(--cream);
+    }
+    footer .script { font-size: 3rem; color: #fff; }
+    footer .ftext { font-size: 1.2rem; letter-spacing: 0.1em; margin-top: 0.5rem; }
+    footer .fdate { margin-top: 1rem; font-family: 'Playfair Display', serif; letter-spacing: 0.2em; color: var(--gold); }
+
+    .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-content">
+      <p class="pretitle">Mis XV Años</p>
+      <h1 class="name">Reyna Elizabet</h1>
+      <p class="subtitle">Muñoz García</p>
+      <div class="hero-date">11 &middot; Julio &middot; 2026</div>
+    </div>
+    <div class="scroll-cue">Desliza &#9662;</div>
+  </header>
+
+  <!-- INTRO -->
+  <section>
+    <div class="container fade-in">
+      <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-6.5-4.35-9-8.5C1.5 9.5 3 6 6.5 6 9 6 10.5 8 12 9.5 13.5 8 15 6 17.5 6 21 6 22.5 9.5 21 12.5 18.5 16.65 12 21 12 21z"/></svg>
+      <h2 class="section-title">Con la bendición de Dios</h2>
+      <p class="section-sub">y de mis padres</p>
+      <div class="divider"></div>
+      <p class="intro-text">Hay momentos en la vida que son muy especiales, y compartirlos con las personas que más quiero los hace inolvidables. Por eso te invito a celebrar conmigo este gran día.</p>
+    </div>
+  </section>
+
+  <!-- PADRES Y PADRINOS -->
+  <section style="padding-top:1rem;">
+    <div class="container fade-in">
+      <div class="divider"></div>
+      <div class="people-grid">
+        <div class="person-card">
+          <p class="label">Mis Padres</p>
+          <p class="pname">Saúl Muñoz Trujillo</p>
+          <p class="pname">Reyna Isael García Nápoles</p>
+        </div>
+        <div class="person-card">
+          <p class="label">Mis Padrinos</p>
+          <p class="pname">Isidro Nápoles</p>
+          <p class="pname">Griselda Saldívar</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CARRUSEL -->
+  <section class="carousel-section">
+    <div class="container fade-in">
+      <h2 class="section-title">Recuerdos</h2>
+      <p class="section-sub">del rancho</p>
+      <div class="divider"></div>
+      <div class="carousel" id="carousel">
+        <div class="carousel-track" id="track">
+          <div class="carousel-slide"><img src="images/imagen1.jpeg" alt="Reyna Elizabet en el rancho" /></div>
+          <div class="carousel-slide"><img src="images/imagen2.jpeg" alt="Reyna Elizabet en el rancho" /></div>
+          <div class="carousel-slide"><img src="images/imagen3.jpeg" alt="Reyna Elizabet en el rancho" /></div>
+          <div class="carousel-slide"><img src="images/imagen4.jpeg" alt="Reyna Elizabet en el rancho" /></div>
+        </div>
+        <button class="carousel-btn prev" id="prevBtn" aria-label="Imagen anterior">&#10094;</button>
+        <button class="carousel-btn next" id="nextBtn" aria-label="Imagen siguiente">&#10095;</button>
+      </div>
+      <div class="carousel-dots" id="dots"></div>
+    </div>
+  </section>
+
+  <!-- EVENTOS -->
+  <section>
+    <div class="container fade-in">
+      <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+      <h2 class="section-title">Itinerario</h2>
+      <p class="section-sub">11 de julio 2026</p>
+      <div class="divider"></div>
+      <div class="timeline">
+        <div class="event-card">
+          <div class="event-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v6M9 5h6M6 22V11a6 6 0 0 1 12 0v11M4 22h16"/></svg></div>
+          <div class="event-info">
+            <p class="etime">4:00 PM</p>
+            <p class="etitle">Misa</p>
+            <p class="eplace">Santuario de Ayotlán</p>
+          </div>
+        </div>
+        <div class="event-card">
+          <div class="event-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21V8l9-5 9 5v13M9 21v-6h6v6"/></svg></div>
+          <div class="event-info">
+            <p class="etime">5:30 PM</p>
+            <p class="etitle">Recepción</p>
+            <p class="eplace">La Terraza de los Amigos</p>
+          </div>
+        </div>
+        <div class="event-card">
+          <div class="event-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 11h18M5 11V7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v4M6 11v8M18 11v8M4 19h16"/></svg></div>
+          <div class="event-info">
+            <p class="etime">6:00 PM</p>
+            <p class="etitle">Comida</p>
+            <p class="eplace">La Terraza de los Amigos</p>
+          </div>
+        </div>
+        <div class="event-card">
+          <div class="event-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="18" r="3"/><circle cx="18" cy="16" r="3"/><path d="M11 18V5l10-2v11"/></svg></div>
+          <div class="event-info">
+            <p class="etime">8:00 PM</p>
+            <p class="etitle">Vals</p>
+            <p class="eplace">La Terraza de los Amigos</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COUNTDOWN -->
+  <section class="countdown-section">
+    <div class="container fade-in">
+      <h2 class="section-title">Cuenta Regresiva</h2>
+      <div class="countdown" id="countdown">
+        <div class="cd-box"><div class="cd-num" id="cd-days">0</div><div class="cd-label">Días</div></div>
+        <div class="cd-box"><div class="cd-num" id="cd-hours">0</div><div class="cd-label">Horas</div></div>
+        <div class="cd-box"><div class="cd-num" id="cd-mins">0</div><div class="cd-label">Min</div></div>
+        <div class="cd-box"><div class="cd-num" id="cd-secs">0</div><div class="cd-label">Seg</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p class="script">¡Te espero!</p>
+    <p class="ftext">Reyna Elizabet Muñoz García</p>
+    <p class="fdate">11 &middot; 07 &middot; 2026 &nbsp;|&nbsp; Ayotlán</p>
+  </footer>
+
+  <script>
+    // ---------- Carrusel ----------
+    (function () {
+      var track = document.getElementById('track');
+      var slides = track.children;
+      var total = slides.length;
+      var index = 0;
+      var dotsContainer = document.getElementById('dots');
+
+      for (var i = 0; i < total; i++) {
+        var d = document.createElement('button');
+        d.className = 'dot' + (i === 0 ? ' active' : '');
+        d.setAttribute('aria-label', 'Ir a la imagen ' + (i + 1));
+        (function (idx) { d.addEventListener('click', function () { goTo(idx); }); })(i);
+        dotsContainer.appendChild(d);
+      }
+      var dots = dotsContainer.children;
+
+      function update() {
+        track.style.transform = 'translateX(' + (-index * 100) + '%)';
+        for (var j = 0; j < dots.length; j++) dots[j].className = 'dot' + (j === index ? ' active' : '');
+      }
+      function goTo(i) { index = (i + total) % total; update(); }
+      function next() { goTo(index + 1); }
+      function prev() { goTo(index - 1); }
+
+      document.getElementById('nextBtn').addEventListener('click', next);
+      document.getElementById('prevBtn').addEventListener('click', prev);
+
+      var auto = setInterval(next, 5000);
+      var carousel = document.getElementById('carousel');
+      carousel.addEventListener('mouseenter', function () { clearInterval(auto); });
+      carousel.addEventListener('mouseleave', function () { auto = setInterval(next, 5000); });
+
+      // Swipe en móvil
+      var startX = 0;
+      carousel.addEventListener('touchstart', function (e) { startX = e.touches[0].clientX; }, { passive: true });
+      carousel.addEventListener('touchend', function (e) {
+        var diff = e.changedTouches[0].clientX - startX;
+        if (diff > 40) prev();
+        else if (diff < -40) next();
+      });
+    })();
+
+    // ---------- Cuenta regresiva ----------
+    (function () {
+      var target = new Date('2026-07-11T16:00:00').getTime();
+      function tick() {
+        var now = Date.now();
+        var diff = target - now;
+        if (diff < 0) diff = 0;
+        var d = Math.floor(diff / 86400000);
+        var h = Math.floor((diff % 86400000) / 3600000);
+        var m = Math.floor((diff % 3600000) / 60000);
+        var s = Math.floor((diff % 60000) / 1000);
+        document.getElementById('cd-days').textContent = d;
+        document.getElementById('cd-hours').textContent = h;
+        document.getElementById('cd-mins').textContent = m;
+        document.getElementById('cd-secs').textContent = s;
+      }
+      tick();
+      setInterval(tick, 1000);
+    })();
+
+    // ---------- Fade-in al hacer scroll ----------
+    (function () {
+      var els = document.querySelectorAll('.fade-in');
+      var obs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) { if (en.isIntersecting) en.target.classList.add('visible'); });
+      }, { threshold: 0.15 });
+      els.forEach(function (el) { obs.observe(el); });
+    })();
+  </script>
+</body>
+</html>
